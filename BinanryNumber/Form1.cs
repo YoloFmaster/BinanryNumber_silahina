@@ -29,41 +29,42 @@ namespace BinanryNumber
 
         private void btnAnswer_Click(object sender, EventArgs e)
         {
-            if (rd2.Checked)
+            txtOutput.Text = string.Empty;
+            int mod, rank = 1, number = Convert.ToInt32(txtInput.Text), binary = 0;
+            int ss = 0;
+            if (rd2.Checked) ss = 2;
+            if (rd8.Checked) ss = 8;
+            if (rd16.Checked) ss = 16;
+            while (number > 0)
             {
-                int mod, rank = 1, number = Convert.ToInt32(txtInput.Text), binary = 0;
-                while (number > 0)
+                mod = number % ss;
+                number /= ss;
+                binary += mod * rank;
+                rank *= 10;
+                switch (mod)
                 {
-                    mod = number % 2;
-                    number /= 2;
-                    binary += mod * rank;
-                    rank *= 10;
+                    case 10:
+                        txtOutput.Text += 'A';
+                        break;
+                    case 11:
+                        txtOutput.Text += 'B';
+                        break;
+                    case 12:
+                        txtOutput.Text += 'C';
+                        break;
+                    case 13:
+                        txtOutput.Text += 'D';
+                        break;
+                    case 14:
+                        txtOutput.Text += 'E';
+                        break;
+                    case 15:
+                        txtOutput.Text += 'F';
+                        break;
+                    default:
+                        txtOutput.Text += Convert.ToString(binary);
+                        break;
                 }
-                txtOutput.Text = Convert.ToString(binary);
-            }        
-            if (rd8.Checked)
-            {
-                int mod, rank = 1, number = Convert.ToInt32(txtInput.Text), binary = 0;
-                while (number > 0)
-                {
-                    mod = number % 8;
-                    number /= 8;
-                    binary += mod * rank;
-                    rank *= 10;
-                }
-                txtOutput.Text = Convert.ToString(binary);
-            }
-            if (rd16.Checked)
-            {
-                int mod, rank = 1, number = Convert.ToInt32(txtInput.Text), binary = 0;
-                while (number > 0)
-                {
-                    mod = number % 2;
-                    number /= 2;
-                    binary += mod * rank;
-                    rank *= 10;
-                }
-                txtOutput.Text = Convert.ToString(binary);
             }
         }
 
@@ -71,7 +72,7 @@ namespace BinanryNumber
         {
             Random rnd = new Random();
             int chislo = rnd.Next(0, 255);
-            txtInput.Text = Convert.ToString(chislo); 
+            txtInput.Text = Convert.ToString(chislo);
         }
     }
 }

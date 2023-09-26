@@ -28,103 +28,110 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.rd8 = new System.Windows.Forms.RadioButton();
-            this.rd16 = new System.Windows.Forms.RadioButton();
-            this.txtOutput = new System.Windows.Forms.TextBox();
-            this.txtInput = new System.Windows.Forms.TextBox();
-            this.btnAnswer = new System.Windows.Forms.Button();
-            this.btnRandomNumber = new System.Windows.Forms.Button();
-            this.rd2 = new System.Windows.Forms.RadioButton();
-            this.SuspendLayout();
+            rd8 = new RadioButton();
+            rd16 = new RadioButton();
+            txtOutput = new TextBox();
+            txtInput = new TextBox();
+            btnAnswer = new Button();
+            btnRandomNumber = new Button();
+            rd2 = new RadioButton();
+            SuspendLayout();
             // 
             // rd8
             // 
-            this.rd8.AutoSize = true;
-            this.rd8.Location = new System.Drawing.Point(99, 159);
-            this.rd8.Name = "rd8";
-            this.rd8.Size = new System.Drawing.Size(31, 19);
-            this.rd8.TabIndex = 1;
-            this.rd8.TabStop = true;
-            this.rd8.Text = "8";
-            this.rd8.UseVisualStyleBackColor = true;
+            rd8.AutoSize = true;
+            rd8.Location = new Point(113, 212);
+            rd8.Margin = new Padding(3, 4, 3, 4);
+            rd8.Name = "rd8";
+            rd8.Size = new Size(38, 24);
+            rd8.TabIndex = 1;
+            rd8.TabStop = true;
+            rd8.Text = "8";
+            rd8.UseVisualStyleBackColor = true;
             // 
             // rd16
             // 
-            this.rd16.AutoSize = true;
-            this.rd16.Location = new System.Drawing.Point(99, 195);
-            this.rd16.Name = "rd16";
-            this.rd16.Size = new System.Drawing.Size(37, 19);
-            this.rd16.TabIndex = 2;
-            this.rd16.TabStop = true;
-            this.rd16.Text = "16";
-            this.rd16.UseVisualStyleBackColor = true;
+            rd16.AutoSize = true;
+            rd16.Location = new Point(113, 260);
+            rd16.Margin = new Padding(3, 4, 3, 4);
+            rd16.Name = "rd16";
+            rd16.Size = new Size(46, 24);
+            rd16.TabIndex = 2;
+            rd16.TabStop = true;
+            rd16.Text = "16";
+            rd16.UseVisualStyleBackColor = true;
             // 
             // txtOutput
             // 
-            this.txtOutput.Location = new System.Drawing.Point(286, 256);
-            this.txtOutput.Name = "txtOutput";
-            this.txtOutput.ReadOnly = true;
-            this.txtOutput.Size = new System.Drawing.Size(180, 23);
-            this.txtOutput.TabIndex = 5;
-            this.txtOutput.TextChanged += new System.EventHandler(this.txtOutput_TextChanged);
+            txtOutput.Location = new Point(327, 341);
+            txtOutput.Margin = new Padding(3, 4, 3, 4);
+            txtOutput.Name = "txtOutput";
+            txtOutput.ReadOnly = true;
+            txtOutput.Size = new Size(465, 27);
+            txtOutput.TabIndex = 5;
+            txtOutput.TextChanged += txtOutput_TextChanged;
             // 
             // txtInput
             // 
-            this.txtInput.Location = new System.Drawing.Point(286, 51);
-            this.txtInput.Name = "txtInput";
-            this.txtInput.Size = new System.Drawing.Size(68, 23);
-            this.txtInput.TabIndex = 6;
-            this.txtInput.TextChanged += new System.EventHandler(this.txtInput_TextChanged);
-            this.txtInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_number_KeyPress);
+            txtInput.Location = new Point(327, 68);
+            txtInput.Margin = new Padding(3, 4, 3, 4);
+            txtInput.Name = "txtInput";
+            txtInput.Size = new Size(77, 27);
+            txtInput.TabIndex = 6;
+            txtInput.TextChanged += txtInput_TextChanged;
+            txtInput.KeyPress += textBox_number_KeyPress;
             // 
             // btnAnswer
             // 
-            this.btnAnswer.Location = new System.Drawing.Point(99, 256);
-            this.btnAnswer.Name = "btnAnswer";
-            this.btnAnswer.Size = new System.Drawing.Size(75, 23);
-            this.btnAnswer.TabIndex = 7;
-            this.btnAnswer.Text = "Ответ";
-            this.btnAnswer.UseVisualStyleBackColor = true;
-            this.btnAnswer.Click += new System.EventHandler(this.btnAnswer_Click);
+            btnAnswer.Location = new Point(113, 341);
+            btnAnswer.Margin = new Padding(3, 4, 3, 4);
+            btnAnswer.Name = "btnAnswer";
+            btnAnswer.Size = new Size(86, 31);
+            btnAnswer.TabIndex = 7;
+            btnAnswer.Text = "Ответ";
+            btnAnswer.UseVisualStyleBackColor = true;
+            btnAnswer.Click += btnAnswer_Click;
             // 
             // btnRandomNumber
             // 
-            this.btnRandomNumber.Location = new System.Drawing.Point(99, 51);
-            this.btnRandomNumber.Name = "btnRandomNumber";
-            this.btnRandomNumber.Size = new System.Drawing.Size(75, 23);
-            this.btnRandomNumber.TabIndex = 8;
-            this.btnRandomNumber.Text = "Загадать кнопку";
-            this.btnRandomNumber.UseVisualStyleBackColor = true;
-            this.btnRandomNumber.Click += new System.EventHandler(this.btnRandomNumber_Click);
+            btnRandomNumber.Location = new Point(113, 68);
+            btnRandomNumber.Margin = new Padding(3, 4, 3, 4);
+            btnRandomNumber.Name = "btnRandomNumber";
+            btnRandomNumber.Size = new Size(86, 31);
+            btnRandomNumber.TabIndex = 8;
+            btnRandomNumber.Text = "Загадать кнопку";
+            btnRandomNumber.UseVisualStyleBackColor = true;
+            btnRandomNumber.Click += btnRandomNumber_Click;
             // 
             // rd2
             // 
-            this.rd2.AutoSize = true;
-            this.rd2.Location = new System.Drawing.Point(99, 122);
-            this.rd2.Name = "rd2";
-            this.rd2.Size = new System.Drawing.Size(31, 19);
-            this.rd2.TabIndex = 9;
-            this.rd2.TabStop = true;
-            this.rd2.Text = "2";
-            this.rd2.UseVisualStyleBackColor = true;
+            rd2.AutoSize = true;
+            rd2.Location = new Point(113, 163);
+            rd2.Margin = new Padding(3, 4, 3, 4);
+            rd2.Name = "rd2";
+            rd2.Size = new Size(38, 24);
+            rd2.TabIndex = 9;
+            rd2.TabStop = true;
+            rd2.Text = "2";
+            rd2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.rd2);
-            this.Controls.Add(this.btnRandomNumber);
-            this.Controls.Add(this.btnAnswer);
-            this.Controls.Add(this.txtInput);
-            this.Controls.Add(this.txtOutput);
-            this.Controls.Add(this.rd16);
-            this.Controls.Add(this.rd8);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(914, 600);
+            Controls.Add(rd2);
+            Controls.Add(btnRandomNumber);
+            Controls.Add(btnAnswer);
+            Controls.Add(txtInput);
+            Controls.Add(txtOutput);
+            Controls.Add(rd16);
+            Controls.Add(rd8);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "Form1";
+            Text = "Form1";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
